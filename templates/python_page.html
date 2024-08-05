@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include "header.html" %}
+<title>Python Basics</title>
+
+<body style="background-color: #404040">
+
+{% include "navbar.html" %}
+
+<main>
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary" style="background-color: #404040">
+        <div class="col-md-6 p-lg-5 mx-auto my-5 border shadow-lg">
+              <h1 class="display-3 fw-bold">Part 1: Fundamentals</h1>
+              <h3 class="fw-normal text-muted mb-3">It is important to note: <br>
+                Python can store information by equating them to 'variables' using the '=' sign. <br>
+                Variables can be called upon later in the programming script.<br></h3>
+        </div>
+            <div class="product-device shadow-sm d-none d-md-block"></div>
+            <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+    </div>
+
+
+<section class="row g-3 g-md-5 mb-5 pb-5 my-3 justify-content-center border shadow-lg">
+    <div class="d-md-flex flex-md-row my-md-3 ps-md-3 ">
+        <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 p-3">
+                <u><h2 class="display-5">Data Types</h2></u>
+                <p class="lead">Data types include primitive types like integers (<b>int</b>), floating-point numbers (<b>float</b>), and complex numbers
+                        (<b>complex</b>) for numerical computations. <br>The bool type represents Boolean values, which can be either <b>True</b> or
+                        <b>False</b>. <br>Python also provides the <b>str</b> type for handling text, supporting Unicode characters for
+                        internationalization.<br>For collections, Python offers several built-in types: lists (list), tuples (tuple), and
+                        ranges (range) for ordered sequences; sets (set and frozenset) for unordered collections with no duplicate
+                        elements; and dictionaries (dict) for key-value pairs.</p>
+            </div>
+        </div>
+
+
+      <div class="text-white me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 py-3">
+          <u><h2 class="display-5">Operators</h2></u>
+          <p class="lead">Arithmetic operators such as <b>+</b> (addition), - (subtraction), <b>*</b> (multiplication), <b>/</b> (division), <b>//</b> (floor
+            division), <b>%</b> (modulus), and <b>**</b> (exponentiation) handle mathematical operations. <br>Comparison operators like <b>==</b>
+            (equal to), <b>!=</b> (not equal to), <b>&gt;</b>, <b>&lt;&lt;</b>, <b>&gt;=</b>, and <b>&lt;=</b> compare values and return Boolean results. <br>Logical operators
+            <b>and</b>, or, <b>and not</b> are used to combine or invert Boolean expressions. <br>Bitwise operators, including <b>&</b> (and), <b>|</b>
+            (or), <b>^</b> (xor), <b>~</b> (not), <b>&lt;&lt;</b> (left shift), and <b>&gt;&gt;</b> (right shift), perform operations at the bit level. <br>Assignment
+            operators such as <b>=</b>, <b>+=</b>, <b>-=</b>, <b>*=</b>, and <b>/=</b> help in assigning and updating values. Additionally, identity
+            operators <b>is</b> and <b>is not</b> to check if two variables reference the same object, and membership operators <b>in</b>
+            and <b>not in</b> to check if a value exists within a sequence or collection.</p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="row g-3 g-md-5 mb-5 pb-5 my-3 justify-content-center border shadow-lg">
+    <div class="d-md-flex flex-md-row-reverse my-md-3 ps-md-3">
+        <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 p-3">
+                <u><h2 class="display-5">Loops</h2></u>
+                <p class="lead">Using the Operator <b>'for'</b>, data types, and conditional logic, python is able to iterate and repeat a set of
+                instructions which is very powerful when repetition is required in a project. For example, if we are
+                required to print out numbers up to 5, we could simply print out 1, 2, 3, 4, 5 individually. However, printing
+                up to 100 or 1000 numbers will take too much time so we can create a 'for' loop, to print the numbers for us, as long as the condition
+                (x&lt;=100) is met:</p></br><p style="text-align: center">for x in range(100): <br>print(x)</p></b>
+            </div>
+        </div>
+
+        <div class="text-white me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 py-3">
+                  <u><h2 class="display-5">Functions</h2></u>
+                  <p class="lead">Defined using the def keyword, functions encapsulate a set of instructions that perform a specific task and can
+                    be executed whenever needed. Functions can accept parameters to allow input variability and return values to
+                    provide output results. Python supports default parameter values, keyword arguments, and variable-length
+                argument lists, offering great flexibility in function definitions</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="row g-3 g-md-5 mb-5 pb-5 my-3 justify-content-center border shadow-lg">
+        <div class="d-md-flex flex-md-row my-md-3 ps-md-3">
+            <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 p-3">
+                      <u><h2 class="display-5">Dictionaries and Lists (with comprehension)</h2></u>
+                      <p class="lead">Python dictionaries and lists are versatile data structures that provide dynamic ways to store and manipulate collections of items. A list is an ordered collection that allows for indexing, slicing, and iteration,
+                        making it ideal for storing sequences of items. Lists can contain elements of different data types, including other
+                        lists, and support a variety of operations like appending, inserting, removing, and sorting elements. Dictionaries,
+                        on the other hand, are unordered collections of key-value pairs, where each key is unique. They allow for fast
+                        lookups, additions, and deletions of values based on their keys. Dictionaries are particularly useful for
+                        representing structured data, such as objects and records, and for implementing associative arrays or hash maps.
+                        Both data structures are mutable, enabling in-place modifications.</p>
+                </div>
+            </div>
+
+            <div class="text-white me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 py-3">
+                    <u><h2 class="display-5">Object-oriented Programming</h2></u>
+                    <p class="lead">Python's object-oriented programming (OOP) paradigm allows for the creation of classes and objects, fostering
+                    code organization, reusability, and abstraction. Classes serve as blueprints for objects, encapsulating data in
+                    attributes and behavior in methods. In Python, a class is defined using the class keyword, and objects are
+                    instantiated from classes to represent specific instances. OOP principles such as inheritance, encapsulation,
+                    and polymorphism are well-supported in Python. Inheritance allows new classes to derive from existing ones,
+                    promoting code reuse and hierarchical relationships. Encapsulation hides the internal state of objects,
+                    exposing only necessary components through methods and properties, thereby enhancing data integrity and
+                    security.</p>
+                </div>
+            </div>
+        </div>
+</section>
+
+<section class="row g-3 g-md-5 mb-5 pb-5 my-3 justify-content-center border shadow-lg">
+    <div class="d-md-flex flex-md-row-reverse my-md-3 ps-md-3">
+        <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 p-3">
+              <u><h2 class="display-5">System Pathing</h2></u>
+              <p class="lead">Everything is saved in a file. Systems interact with files and 'call' upon them to run the contents. If the contents of the file happen to have instructions, the computer will follow it. This is the basic premise of programs. This means that understanding file pathing is crucial as computers are literal and any small mistake will cause the program to fail. (This includes re-naming the file without changing the name of the url, moving the file without changing the file path, and re-naming the folders/directory without changing the filepath.</p>
+            </div>
+        </div>
+
+        <div class="text-white me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 py-3">
+              <u><h2 class="display-5">TKinter</h2></u>
+              <p class="lead">TKinter is a Graphic User Interface toolkit within Python that enables a programmer to change the 'window' where a user will interact with the software (think 'Menu Screen').</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="row g-3 g-md-5 mb-5 pb-5 my-3 justify-content-center border shadow-lg">
+        <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+            <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 py-3">
+                  <u><h2 class="display-5">API usage and manipulation (inc. errors and exceptions)</h2></u>
+                  <p class="lead">here is some text about API usage and manipulation (inc. errors and exceptions)</p>
+                </div>
+            </div>
+
+            <div class="text-white me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 py-3">
+                      <u><h2 class="display-5">Data manipulation (JSON)</h2></u>
+                      <p class="lead">here is some text about Data manipulation (JSON)</p>
+                </div>
+            </div>
+        </div>
+</section>
+</main>
+
+
+{% include "links.html" %}
+
+</body>
+
+{% include "footer.html" %}
+
+</html>

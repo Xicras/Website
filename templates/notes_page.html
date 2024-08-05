@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+{% include "header.html" %}
+<title>Notes</title>
+
+<body>
+    {% include "navbar.html" %}
+    <div class="div1"><a>Notes across python</a></div>
+
+    <hr class="breaker_setting1">
+
+    <div class="div2">
+        <p>This section assumes you have basic knowledge of Python (see the python page)! For website development, check the HTML page!<br>If you would like to start your own adventure; I recommend the '100 days of coding' created by Dr Angela Yu on Udemy. Which contains free resources with explanations, as well as assessments to test your understanding!</p>
+
+        <p><b>Positional vs Keyword arguements: </b><br>
+        Keyword - func(a, b, c) where 'a', 'b', 'c' is used to define specific arguments. i.e., in command-> func(a=3) will update 'a' to 3 in the functional definition. <br>
+        Position - func(a,b,c) where the position is used to define specific arguments i.e., in command -> func(3) will update 'a' to 3 as it is the first argument linked to the first position in the functional definition. </p>
+
+        <p><b>Lists: </b><br>
+            Standard format:: New_list = [newitem for olditem in oldlist if &lt;test&gt;]. <br>
+            If struggling, try to repeat the exact same list in the new list (aka 'newitem' for 'olditem' in list will copy the same item from the old list to the new list) then think about the required functions to change the olditem into the new item (aka &lt;test&gt;), multiple operators can be added (and, or, etc). <br>
+            Multiple lists can be checked by using the 'and' operator: new_list = [newitem for olditem in oldlist and oldlist2]</p>
+
+        <p><b>Dictionaries: </b>Use "{}" instead of "[]". <br> Simplified formula: "new_dict_name = {newkey:newvalue for (oldkey, oldvalue) in dictionary.items() if test" <br><b>DO NOT FORGET '.items()'</b></p>
+
+        <p>
+            <b>Errors and Exceptions: </b><br>
+            try: line(s) of code that is expected to cause an issue<br>
+            except: do this (to fix) if there was an issue<br>
+            else: do this if there was no issue<br>
+            finally: do this after everything, no matter if there was or wasn't an issue<br>
+            raise: prints string as message
+        </p>
+        <p>
+            <b>File pathing:</b><br>
+            Absolute pathing contains the entire path from the drive -&gt; "C:\Users\eyuzo\Downloads\python-3.12.4-amd64.exe". <br>
+            However, opening a file located in another folder requires pathing from the content root -&gt; "..\.\python-3.12.4-amd64.exe"<br>
+            ".." is the same as "in parent folder" // "." is the same as "in the same folder"
+        </p>
+        <p>
+            <b>Environmental Variables</b><br>
+            When creating programs that interact with other people's systems, passwords and key-data will be required. <br>
+            So, when creating authentication methods or logging into an API. Passwords can be saved within environmental variables (using the 'os' module) and saved locally instead of adding them as constants within the script itself. <br>
+            CODE: import 'os'. VARIABLE = os.environ["VARIABLE_NAME"]. NOTE: The 'os' module can also be used to fully manage your drive! <br>
+            If the variable does not exist, os.environ["VARIABLE_NAME"] = VARIABLE will instead create the variable which can be called later.
+        </p>
+    </div>
+    <hr class="breaker_setting1">
+
+    {% include "links.html" %}
+
+    <p>End of website</p>
+
+</body>
+
+{% include "footer.html" %}
+
+</html>

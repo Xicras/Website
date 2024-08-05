@@ -1,0 +1,51 @@
+    html{
+      background-color: #b0d8e3;
+    }
+    .div1{
+      max-width: fit-content;
+      margin: auto;
+      color: #555555;
+      font-family: "verdana";
+      font-size: 56px;
+      text-transform: uppercase;
+      
+    }
+    .div2{
+      margin: 0px 1rem;
+      color: black;
+      font-family: "verdana", serif;
+      font-size: 16px;
+    }
+    .div3{
+      color: white;
+      text-align: center;
+      font-family: "verdana", serif;
+      font-size: 24px;
+      text-transform: uppercase;
+    }
+    .tf{
+        margin: auto;
+        max-width: fit-content;
+      }
+    .small_print{
+        text-align: center;
+        background-color: white;
+        color: black;
+        font-size: 0.75rem;
+
+      }
+    .breaker_setting1{
+        height: 2rem;
+        background-color: white;
+        border-width: 0;
+    }
+    .breaker_setting2{
+        height: 1rem;
+        background-color: white;
+        border-width: 0;
+    }
+    .flex-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
