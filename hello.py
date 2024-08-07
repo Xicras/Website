@@ -26,7 +26,7 @@ class Base(DeclarativeBase):
 
 app.secret_key = os.environ["secret_key"]
 
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///blog.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DB_name")
 db = SQLAlchemy(model_class=Base)
 db.init_app(app)
 

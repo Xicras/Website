@@ -7,7 +7,7 @@ class Post_form(FlaskForm):
     subtitle = StringField(u'Add a Subtitle', validators=[DataRequired()])
     content = CKEditorField(u'Body')
     img_url = StringField(u'Image URL', validators=[DataRequired(), URL()])
-    submit = SubmitField()
+    submit = SubmitField("Submit Post")
 
 class RegistrationForm(FlaskForm):
     name = StringField("Username", validators=[DataRequired()])
