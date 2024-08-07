@@ -76,7 +76,7 @@
                 {% endfor %}
                 <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
                     {% if current_user.is_authenticated: %}
-                <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="{{ url_for('create') }}">Create a Post</a></div>
+                <div class="d-flex justify-content-end mb-4"><a class="btn btn-secondary text-uppercase" href="{{ url_for('create') }}">Create a Post</a></div>
                     {% endif %}
                 </div>
             </div>

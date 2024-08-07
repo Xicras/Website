@@ -21,7 +21,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand">Start Bootstrap</a>
+                <a class="navbar-brand">Eric's Website - About me!</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -29,8 +29,13 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/about">About</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/contact">Contact</a></li>
+                        {% if not current_user.is_authenticated: %}
+                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="url_for('login')">Login</a></li>
+                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="url_for('register')">Register</a></li>
+                    {% else: %}
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="url_for('logout') ">Log Out</a></li>
+                {% endif %}
                     </ul>
                 </div>
             </div>
@@ -53,7 +58,7 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <p>An avid individual who pursues the understanding of computer systems and programming. My primary skills are in Python, HTML (Web Development), and debugging.</p>
+                        <p>An avid individual who pursues the understanding of computer systems and programming. My primary language is Python, with skills in Web dev (HTML, CSS, JS, Flask, Bootstrap, etc), Webscraping (BeautifulSoup, Selenium), backend (SQLAlchemy, PostgreSQL, Flask-integration, API management), and still learning!</p>
                         <p>With a career in clinical Quality Assurance, I gained a keen eye for the details which has helped in the thousand line scripts of coding. Being able to see the grand picture as well as advise on ways to make processes easier, has also enabled my critical thinking to go above and beyond. I have shadowed scrim teams and am aware of the importance of having everyone on the same page and aware of the project progression.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid ex itaque esse est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit tempora!</p>
                     </div>

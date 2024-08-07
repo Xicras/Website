@@ -33,7 +33,7 @@
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/">Home</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/posts">Posts</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/about">About</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/contact">Contact</a></li>
                         {% if current_user.is_authenticated == False: %}
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url_for('login') }}">Login</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url_for('register') }}">Register</a></li>
@@ -54,7 +54,7 @@
                             <h2 class="subheading">{{ post["subtitle"] }}</h2>
                             <a>
                                 Posted by
-                                <u><a>{{ post["author"] }}</a></u>
+                                <i><u><a>{{ post["author"] }}</a></u></i>
                                 on {{ post["date"] }}
                             </a>
                         </div>

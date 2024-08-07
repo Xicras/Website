@@ -7,7 +7,7 @@ class Post_form(FlaskForm):
     subtitle = StringField(u'Add a Subtitle', validators=[DataRequired()])
     content = CKEditorField(u'Body')
     img_url = StringField(u'Image URL', validators=[DataRequired(), URL()])
-    submit = SubmitField("Submit Post")
+    submit = SubmitField("Publish Post")
 
 class RegistrationForm(FlaskForm):
     name = StringField("Username", validators=[DataRequired()])
@@ -18,8 +18,13 @@ class RegistrationForm(FlaskForm):
 class LoginForm(FlaskForm):
     email = StringField("Email", validators=[DataRequired()])
     password = StringField("Password", validators=[DataRequired()])
-    submit = SubmitField("Register")
+    submit = SubmitField("Login")
 
 class Comment_Form(FlaskForm):
     user_comment = CKEditorField('Comments', validators=[DataRequired()])
     submit = SubmitField()
+
+class Contact_Form(FlaskForm):
+    phone_number = StringField(u'Phone Number')
+    message = CKEditorField(u'Message', validators=[DataRequired()])
+    submit = SubmitField(u'Send message')

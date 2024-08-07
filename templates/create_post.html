@@ -37,6 +37,9 @@
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/">Home</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about">About</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact">Contact</a></li>
+                    {% if current_user.is_authenticated: %}
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url_for('logout') }}">Logout</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
@@ -47,8 +50,13 @@
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <div class="site-heading">
+                        {% if editing: %}
+                        <h1>Edit post!</h1>
+                        <span class="subheading">Please edit the post using the form below</span>
+                        {% else: %}
                         <h1>Create your own post!</h1>
                         <span class="subheading">Please fill out the below as distinctly as possible! Thank you!</span>
+                        {% endif %}
                     </div>
                 </div>
             </div>

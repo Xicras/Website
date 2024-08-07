@@ -96,7 +96,7 @@ def admin_only(f):
 def main_page():
     return render_template("main_page.html")
 
-######## pages
+######## other pages
 @app.route("/notes")
 def notes():
     return render_template("notes_page.html")
@@ -130,22 +130,23 @@ def about():
 @app.route('/contact', methods=["GET", "POST"])
 @login_required
 def contact():
-    if request.method == "GET":
-        return render_template("contact.html", sent_message=False)
-    else:
-        NAME = request.form["name"]
-        NUMBER = request.form["number"]
+    form = Contact_Form()
+    sent_message = False
+    if form.validate_on_submit():
+        NAME = current_user.name
+        NUMBER = request.form["phone_number"]
         MESSAGE = request.form["message"]
+        EMAIL = current_user.email
         with smtplib.SMTP("smtp.gmail.com") as connection:
             my_email = os.environ.get('real_email')
             connection.starttls()
             connection.login(user=my_email, password=app_key)
             connection.sendmail(from_addr=my_email, to_addrs=my_email, msg=f"Subject: Message from website.\n\n"
-                                                                           f"From: {NAME}. \n"
+                                                                           f"From: {NAME}. Email: {EMAIL} \n"
                                                                            f"Phone: {NUMBER}.\n"
                                                                            f"Message: {MESSAGE}.")
-        return render_template("contact.html", sent_message=True)
-
+        return redirect(url_for("posts_page"))
+    return render_template("contact.html", sent_message=sent_message, form=form)
 
 ############posts brain
 @app.route('/posts/<posts_id>', methods=["GET", "POST"])
@@ -175,7 +176,7 @@ def create():
     return render_template('create_post.html', form=form, current_user=current_user)
 
 
-@app.route('/edit_post/<post_id>', methods=["GET", "POST"])
+@app.route('/edit_post/<int:post_id>', methods=["GET", "POST"])
 @login_required
 def edit_post(post_id):
     post = db.get_or_404(Blogposts, post_id)
@@ -187,15 +188,14 @@ def edit_post(post_id):
         content=post.content,
     )
     if edit_form.validate_on_submit():
-        post.title = edit_form.title.data
-        post.subtitle = edit_form.subtitle.data
-        post.img_url = edit_form.img_url.data
-        post.author = current_user
-        post.content = edit_form.content.data
+        post.title = request.form["title"]
+        post.subtitle = request.form["subtitle"]
+        post.img_url = request.form["img_url"]
+        post.author = current_user.name
+        post.content = request.form["content"]
         db.session.commit()
-
         return redirect(url_for('posts', posts_id=post.id))
-    return render_template('create_post.html', form=edit_form, current_user=current_user)
+    return render_template('create_post.html', form=edit_form, current_user=current_user, editing=True)
 
 
 @app.route('/delete/<int:post_id>', methods=["GET"])
@@ -239,7 +239,6 @@ def login():
                 login_user(user)
             return redirect(url_for('posts_page'))
     return render_template("login.html", form=form)
-
 
 @app.route('/logout')
 def logout():
