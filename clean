@@ -1,0 +1,17 @@
+[33mcommit ed4403b9e691edb37765c48496b4e37f633b0390[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: Eric <eyuzon25@yahoo.com>
+Date:   Wed Aug 7 14:58:24 2024 +0100
+
+    create contact form for contact page, update to string for loging and post submitfields, add comment noting start of other pages links, recode contact function to include validate+on_submit instead of checking method and qol updates to redirections, add data type to edit_post url and qol to form request,qol updates to post_page/post_format/navbar/create_post/contact/ and about html pages.
+
+[33mcommit 097ad476fd6703c779e1beab7c9b0b9fbcca8e4a[m
+Author: Eric <eyuzon25@yahoo.com>
+Date:   Wed Aug 7 13:22:04 2024 +0100
+
+    v0.2 update gitignore, db reference removed, update string for submitfield in Post_form update
+
+[33mcommit f9e914f62e7db5aa66503a71b540ff498ef7cedc[m
+Author: Eric <eyuzon25@yahoo.com>
+Date:   Mon Aug 5 12:20:22 2024 +0100
+
+    V0.1, Blog site established, HTML/Visuals pages not done, login code added, CSS added, admin account created, authenticator added

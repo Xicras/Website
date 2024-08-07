@@ -38,14 +38,14 @@
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="{{ url_for('about') }}">About</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="{{ url_for('contact') }}">Contact Me</a></li>
-                  <li><hr class="dropdown-divider"></li>
                 {% if not current_user.is_authenticated: %}
                   <li><a class="dropdown-item" href="{{ url_for('login') }}">Login</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="{{ url_for('register') }}">Register</a></li>
                   <li><hr class="dropdown-divider"></li>
                     {% else: %}
+                  <li><a class="dropdown-item" href="{{ url_for('contact') }}">Contact Me</a></li>
+                  <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a></li>
                       <li><hr class="dropdown-divider"></li>
                 {% endif %}
