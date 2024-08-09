@@ -42,6 +42,8 @@ class Blogposts(db.Model):
     date: Mapped[str] = mapped_column(String, nullable=False)
     comments = relationship("Comments", back_populates="parent_post")
 
+
+
 class Users(UserMixin, db.Model):
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     email: Mapped[str] = mapped_column(String(100), unique=True)
@@ -207,6 +209,8 @@ def delete(post_id):
         db.session.delete(post)
         db.session.commit()
     return redirect(url_for('posts_page'))
+
+
 
 
 ###############users management
