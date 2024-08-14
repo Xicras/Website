@@ -65,9 +65,8 @@ class Comments(db.Model):
     parent_post = relationship("Blogposts", back_populates="comments")
 
 
-
-with app.app_context():
-    db.create_all()
+# with app.app_context():
+#     db.create_all()
 
 
 login_manager = LoginManager()
@@ -247,7 +246,8 @@ def login():
 @app.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('posts_page'))
+    return redirect(url_for('main_page'))
+
 
 if __name__ == "__main__":
     app.run(debug=True)

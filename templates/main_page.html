@@ -6,6 +6,7 @@
 
 <body style="background-color: #b0d8e3;">
 
+
 <div class="px-4 pt-5 my-5 text-center my-5 border shadow-lg">
   <h1 class="display-4 fw-bold text-body-emphasis">Welcome to my website!</h1>
   <div class="col-lg-6 mx-auto">
@@ -21,20 +22,30 @@
       <img src="https://martech.org/wp-content/uploads/2017/09/Customer-Journey.png" class="d-block mx-lg-auto img-fluid" alt="Picture of road with 5 coloured points of interest; blue, purple, teal, yellow, red." width="800" height="600" loading="lazy">
     </div>
     <div class="col-lg-6">
-      <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Journey</h1>
-      <p class="lead">My journey started when I was a little kid where I would always try to see if I could make things easier. For better or worse, this mindset stuck with me into university and my career! One of my earliest workplace projects included creating a
+        <div class="hover_div"><h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Journey</h1><i>Hover over the header to expand</i></div>
+              <div class="hide">
+                <p class="lead">My journey started when I was a little kid where I would always try to see if I could make things easier. For better or worse, this mindset stuck with me into university and my career! One of my earliest workplace projects included creating a
         comparison program between an internal and external excel report that contained thousands of rows of box-ID. With no prior knowledge, I
         used excel macros to locate the files and the function 'VLOOKUP' to check if there were any IDs missing in each report. The check would
         then reverse-check to double-check it's work. I identified many boxes which were either missing were destroyed despite being billed.</p>
+              </div>
       <div class="d-grid gap-2 d-md-flex justify-content-md-start">
       </div>
     </div>
   </div>
+
 </div>
 
 <hr class="breaker_setting1">
 
 <div class="container col-xxl-8 px-4 py-5 my-5 border shadow-lg">
+<h2 style="text-align:center">Hobbies and Reading Material</h2>
+<div class="row flex-lg-row align-items-center g-5 py-5">
+  <div class="col-10 col-sm-8 col-lg-6">
+      <img src="https://media.istockphoto.com/id/1589828270/photo/victory-white-king-lies-defeated-at-foot-of-winning-black-queen.webp?b=1&s=170667a&w=0&k=20&c=84ATVKZ-OB7fFHs8Tmvo2IfnCVvp91GCZHpQ5dohymc=" class="d-block mx-lg-auto img-fluid" alt="White-king-lies-defeated-at-foot-of-winning-black-queen" width="750" height="600" loading="lazy">
+    </div>
+  <div class="col-lg-6">
+  <!-----Hobby Container--->
   <div class="col-md-10">
     <h2 class="text-body-emphasis">Personal Hobbies</h2>
     <p>When getting frustrated, I turn towards other things to help refocus my mind. Below are some links to my hobbies:</p>
@@ -66,7 +77,7 @@
     </ul>
   </div>
 
-
+  <!-----Links Container--->
   <div class="col-md-10" >
     <h2 class="text-body-emphasis">Useful Websites:</h2>
     <p>Below are websites I used that helped me on my journey through creating this website:</p>
@@ -103,6 +114,8 @@
       </li>
     </ul>
   </div>
+    </div>
+</div>
 </div>
 
 <hr class="breaker_setting1">
@@ -120,8 +133,36 @@
         felis bibendum ut tristique et. Justo nec ultrices dui sapien eget mi. In vitae turpis massa sed elementum tempus. Eu
         facilisis sed odio morbi quis commodo. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae.
       </p>
+
+<!----Skill bar progression ---->
+  <div class="container col-xxl-8 px-4 py-5 my-5 border shadow-lg">
+  {% include "skill_bar.html" %}
+    <div class="row flex-lg-row align-items-center g-5 py-5">
+      <div class="col-lg-6 mx-auto">
+        <h1>My Skills at the end of this page</h1>
+        <h4>HTML</h4>
+          <div class="container">
+            <div class="skills html1">10%</div>
+          </div>
+
+        <h4>Python</h4>
+          <div class="container">
+            <div class="skills python1">20%</div>
+          </div>
+      </div>
+      <div class="col-lg-6">
+        This homepage was created with very fundamental knowledge of CSS and HTML.
+        The text above spans from edge-to-edge with very little attentive styles, makes it all look document-esque, little UI/UX.
+        'Containers' as a way of organising the page was taught further down the line.
+      </div>
+    </div>
+  </div>
+  <!----End of skill bar progression ---->
 </div>
 
+</body>
+
+<!---Page Links-->
   {% include "links.html" %}
 
 

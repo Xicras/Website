@@ -49,3 +49,19 @@
       justify-content: center;
       align-items: center;
     }
+    .hover_div:hover + .hide{
+    display: block;
+    transition-delay: 1s;
+    }
+    .hide{
+    display: none;
+    }
+    .container_grow{
+    width: 450px;
+    height: 250px;
+    transition: transform 0.3s ease; /* Smooth transition */
+    }
+    .container_grow:hover {
+        transform: scale(1.1); /* Grows the container by 10% */
+    }
+
