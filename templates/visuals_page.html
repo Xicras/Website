@@ -2,54 +2,115 @@
 <html lang="en">
 
 {% include "header.html" %}
-
+{% include "skill_bar.html" %}
 {% include "navbar.html" %}
 <title>Visuals</title>
 
 <body>
 
-<div class="div1"><a>Visual Graphics (Python Turtle Graphics)</a></div>
+<div class="div1"><a>Programming with Visuals</a></div>
 
 <hr class="breaker_setting1">
 
 <div class="div2">
-    <p>Some notes I picked up:</p></div>
+    <h2>Projects:</h2></div>
 
-<hr class="breaker_setting1">
+<!----Project 1--->
+<div class="container col-xxl-8 px-4 py-5 my-5 border shadow-lg">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img src="static/assets/Turtle_crossing_game.png" class="d-block mx-lg-auto img-fluid" alt="Game about a turtle crossing lanes, with 2 yellows, an orange, a red, and a blue block intercepting its path" width="800" height="600" loading="lazy">
+    </div>
 
-<div class="div2">
-    <p>Links to other sites</p>
+    <div class="col-lg-6">
+        <div class="hover_div"><h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">The Crossing Game</h1><i>Hover over the header to expand</i></div>
+              <div class="hide">
+                <p class="lead">My first completed game, based off 'Crossy Road'. Simplified down to the basics, you play a 2d 'turtle' and aim to get to the other side. All coloured blocks are randomly generated, with their speeds limited by what level the player is currently on. </p>
+              </div>
+    </div>
+  </div>
 </div>
-<table class="tf">
-        <td>
-        <div class="div3"><a href="/notes">Notes</a></div><br>
-        <iframe src="https://giphy.com/embed/l2SpZkQ0XT1XtKus0" width="480" height="250" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p>
-        </td>
 
-    <td>
-        <div class="div3">
-            <a href="/python">Python basics and projects</a></div><br>
-        <iframe src="https://giphy.com/embed/coxQHKASG60HrHtvkt" width="480" height="250" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p>
-    </td>
-        <td>
-            <div class="div3">
-                <a href="/visuals">Visuals (not V.S)</a></div><br>
-                <img src="https://cdnb.artstation.com/p/assets/images/images/017/273/181/large/atle-winther-9.jpg?1555329939" width="480" height ="250" alt="Picture of Python's Turtle Graphics, swirl design"><p>
-        </td>
-        <td>
-            <div class="div3">
-                <a href="/html">HTML (inc. VS)</a></div><br>
-                <img style="background-color: #DBE9F4" src="https://kinsta.com/wp-content/uploads/2021/03/HTML-5-Badge-Logo.png" width="480" height ="250" alt="Picture of the HTML logo, a white '5' on a red shield with a yellow background"><p>
-        </td>
-</table>
+
+<hr class="breaker_setting1">
+
+    <!----Project 2--->
+<div class="container col-xxl-8 px-4 py-5 my-5 border shadow-lg">
+  <div class="row flex-lg-row align-items-center g-5 py-5">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img src="static/assets/Pong_game.png" class="d-block mx-lg-auto img-fluid" alt="Screenshot of 2-player pong game." width="800" height="600" loading="lazy">
+    </div>
+
+    <div class="col-lg-6">
+        <div class="hover_div"><h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">2-Player Pong</h1><i>Hover over the header to expand</i></div>
+              <div class="hide">
+                <p class="lead">Based off the first ever commercialised game in existance, this project focused more on Object-Oriented Programming (particularly through the '2-player' aspect) with some mathematical theory on ball movement and inverse operations. </p>
+              </div>
+    </div>
+  </div>
+</div>
+
+
+<hr class="breaker_setting1">
+
+
+<!----Project 3 ---->
+<div class="container col-xxl-8 px-4 py-5 my-5 border shadow-lg">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img src="static/assets/Guess_the_states.png" class="d-block mx-lg-auto img-fluid" alt="Image of white United States of America without the name of the states except Illinois." width="800" height="600" loading="lazy">
+    </div>
+
+    <div class="col-lg-6">
+        <div class="hover_div"><h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Guess the states!</h1><i>Hover over the header to expand</i></div>
+              <div class="hide">
+                <p class="lead">The greater aim of this project was to create a worldwide version by focusing on the continental scales first. North America was the first continent. From the pop-up, you can see that the current score is kept out of the total states.</p>
+              </div>
+    </div>
+  </div>
+</div>
+
+
+<hr class="breaker_setting1">
+
+<div class="flip-card">
+    <div class="flip-card-inner container col-xxl-auto px-4 py-4 my-5 border shadow-lg" style="height: 500px">
+        <div class="flip-card-front">
+            <h1>Mathematical Plots</h1>
+            <img src="static/assets/seaborn_scatterplot.png" width="500" height="400" alt="Scatterplot of Movies Release date (in years) vs Worldwide gross profit (in US dollars)">
+        </div>
+        <div class="flip-card-back">
+          <h1>Experimenting with maths</h1>
+          <p>Of course programming is not complete without Data Science. </p>
+          <p>Using Jupyter and Google Colaboratory, I've manipulated data sets with Pandas, Matplotlib, NumPy, and Seaborn libraries.</p>
+          <p>Together with webscraping, I am able to complete all three main objectives of Data Analysis; Gathering, Manipulation, and Presentation.</p>
+
+        </div>
+    </div>
+</div>
+
 
 <hr class="breaker_setting2">
 
+
+
 <div class="div2">
-    <p>New section of website</p></div>
+      <div class="col-lg-6 mx-auto">
+        <h1>My Skills at the end of this page</h1>
+        <h4>HTML</h4>
+          <div class="container">
+            <div class="skills html3">50%</div>
+          </div>
+
+        <h4>Python</h4>
+          <div class="container">
+            <div class="skills python3">35%</div>
+          </div>
+      </div>
+</div>
 
 </body>
-
+  {% include "links.html" %}
 {% include "footer.html" %}
 
 

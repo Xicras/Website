@@ -240,7 +240,9 @@ def login():
         if user:
             if check_password_hash(pwhash=user.password, password=password):
                 login_user(user)
-            return redirect(url_for('posts_page'))
+                return redirect(url_for('posts_page'))
+            return render_template("login.html", form=form, password_incorrect=True)
+        return render_template("login.html", form=form, user_incorrect=True)
     return render_template("login.html", form=form)
 
 @app.route('/logout')
